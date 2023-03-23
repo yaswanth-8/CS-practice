@@ -3,6 +3,13 @@ using System.Reflection.Metadata.Ecma335;
 
 namespace Training
 {
+    class pg {
+        ~pg()
+        {
+            Console.WriteLine("invoked destructor");
+        }
+    }
+
     class Program
     {
         string Name;
@@ -17,10 +24,12 @@ namespace Training
         }
         public void displayStudent()
         {
-            Console.WriteLine("Details of the student are : " + Name+ " is th name ");
-            Console.WriteLine(id + " is id " + department + "is dept " + grade + " is grade");
+            Console.WriteLine("Details of the student are : " + Name+ " is the name ");
+            Console.WriteLine(id + " is id " + department + " is dept " + grade + " is grade");
         }
        
+
+
         static void Main(string[] args)
         {
 
@@ -28,7 +37,10 @@ namespace Training
             myProgram.displayStudent();
             Program myProgram1 = new Program("varun", 10, "cs", 9.2f);
             myProgram1.displayStudent();
+            pg PG = new pg();
         }
+
+        
     
     }
 }
