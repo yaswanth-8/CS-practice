@@ -1,22 +1,24 @@
 ﻿using System;
 using System.Reflection.Metadata.Ecma335;
 
-namespace HelloWorld
+namespace Training
 {
     class Program
     {
        
         static void Main(string[] args)
         {
-            int a = 5;
-            check(ref a);
-            Console.WriteLine(a);
+            int[][] arr = new int[2][];
+            arr[0] = new int[] { 1, 2 };
+            Console.WriteLine(arr[0].Length);
+           /* for(int i = 0; i < 2; i++)
+            {
+                for(int j = 0; j <3; j++)
+                {
+                    Console.WriteLine(arr[i, j]);
+                }
+            }*/
         }
-        static void check(ref int a)
-        {
-            a++;
-        }
-        //pulled from github -1
-        //pushing to github from vs
+    
     }
 }
